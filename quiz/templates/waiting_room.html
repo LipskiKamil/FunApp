@@ -1,0 +1,94 @@
+<!-- templates/game_play.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Play</title>
+    <style>
+        body {
+            background-color: #8a2be2; /* Fioletowe tło */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            color: black;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .start-button {
+            background-color: #1b1e1b; /* Zielony kolor guzika */
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Rozgrywka</h2>
+    <p>Witaj, {{ nickname }}! Dołączyłeś do gry o kodzie: {{ game_code }}</p>
+    <div class="container">
+        <ul>
+            <!-- Dodaj poniżej elementy listy dla innych graczy -->
+            {% for player in players %}
+                <li>{{ player.nickname }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+<a href="{% url 'start_game' game_code=game_code nickname=nickname %}">
+    <button type="button" class="start-button">Rozpocznij Quiz</button>
+</a>
+
+    <a href="{% url 'leave_game' game_code=game_code nickname=nickname %}">
+    <button type="button" class="start-button">Wyjdź z gry</button>
+</a>
+
+
+
+</body>
+</html>

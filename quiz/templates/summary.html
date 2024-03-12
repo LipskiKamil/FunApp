@@ -1,0 +1,78 @@
+    <style>
+        body {
+            background-color: #6f42c1; /* Fioletowe tło */
+            color: black; /* Biały kolor tekstu */
+            font-family: Arial, sans-serif; /* Wybrana czcionka */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; /* Wewnętrzny odstęp dla całej strony */
+        }
+
+        h1 {
+            color: white; /* Biały kolor tekstu dla nagłówków */
+        }
+
+        p {
+            color: white; /* Biały kolor tekstu dla paragrafów */
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px; /* Zakrąglenie rogów tabeli */
+        }
+
+        th, td {
+            border: 1px solid #6f42c1; /* Kolor obramowania komórek tabeli */
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: black; /* Fioletowy kolor tła nagłówków */
+            color: white; /* Biały kolor tekstu nagłówków */
+            border-top-left-radius: 8px; /* Zakrąglenie górnego lewego rogu */
+            border-top-right-radius: 8px; /* Zakrąglenie górnego prawego rogu */
+        }
+
+        td {
+            background-color: #ffffff; /* Tło komórek danych */
+        }
+
+        button {
+            background-color: #6f42c1; /* Fioletowy kolor przycisku */
+            color: #ffffff; /* Biały kolor tekstu przycisku */
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px; /* Odstęp od ostatniego elementu */
+        }
+
+        button:hover {
+            background-color: #593499; /* Kolor przycisku po najechaniu myszką */
+        }
+    </style>
+
+<h1>Game Summary</h1>
+<p>Game Code: {{ game.game_code }}</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nickname</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in players %}
+      <tr>
+        <td>{{ player.nickname }}</td>
+        <td>{{ player.score }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
