@@ -65,7 +65,7 @@ class CreateGameView(View):
 
             return redirect('JoinGame')  # Update with the correct URL name or path
         else:
-            error_message = "Invalid form submission. Please check the entered data."
+            error_message = "Gra o takim kodzie już istnieje."
             context = {'form': form, 'error_message': error_message}
             return render(request, self.template_name, context)
 def waiting_room(request, game_code, nickname):

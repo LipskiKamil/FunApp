@@ -53,9 +53,6 @@ h2 {
     <title>Stwórz nowy quiz</title>
 </head>
 <body>
-    {% if error_message %}
-        <p style="color: black; font-size: 30px;">{{ error_message }}</p>
-    {% endif %}
 <h2>Stwórz nowy quiz</h2>
 <div class="container">
 <form method="post" action="{% url 'CreateGame' %}">

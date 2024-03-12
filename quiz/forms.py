@@ -19,3 +19,8 @@ class GameForm(forms.ModelForm):
         widgets = {
             'questions': forms.CheckboxSelectMultiple(),
         }
+    def clean_game_code(self):
+        game_code = self.cleaned_data.get('game_code')
+        if Game.objects.filter(game_code=game_code).exists():
+            raise forms.ValidationError("Gra o takim kodzie już istnieje!")
+        return game_code
