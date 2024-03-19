@@ -1,56 +1,10 @@
-<!-- templates/index.html -->
-
+{% load static %}
 <!DOCTYPE html>
 <html>
-<style>
-    /* static/styles.css */
 
-body {
-    background-color: #6f42c1; /* Fioletowe tło */
-    color: black; /* Biały kolor tekstu */
-    font-family: Arial, sans-serif; /* Wybrana czcionka */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form {
-    max-width: 400px; /* Maksymalna szerokość formularza */
-    margin: 0 auto; /* Centralizacja formularza */
-    padding: 20px; /* Wewnętrzny odstęp formularza */
-    background-color: #ffffff; /* Tło formularza */
-    border-radius: 8px; /* Zakrąglenie rogów formularza */
-}
-
-input[type="text"], button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #6f42c1; /* Fioletowy kolor przycisku */
-    color: #ffffff; /* Biały kolor tekstu przycisku */
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #593499; /* Kolor przycisku po najechaniu myszką */
-}
-h2 {
-    color: white;
-    vertical-align: center;
-}
-</style>
 <head>
     <title>Join Game</title>
+    <link rel="stylesheet" href="{% static 'joingame.css' %}">
 </head>
 <body>
     {% if error_message %}

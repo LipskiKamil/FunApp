@@ -1,0 +1,55 @@
+        body {
+            background-color: #6f42c1;
+            color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+#proverb-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.freepik.com/darmowe-wektory/plaskie-chinskie-tlo-nowego-roku_23-2149264915.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.6s ease;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+#proverb-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+        #backButton {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #backButton:hover {
+            background-color: #f8f9fa;
+            color: #000000;
+        }

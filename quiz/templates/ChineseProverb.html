@@ -1,66 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinese Proverb</title>
-    <style>
-        body {
-            background-color: #6f42c1;
-            color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-#proverb-container {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://img.freepik.com/darmowe-wektory/plaskie-chinskie-tlo-nowego-roku_23-2149264915.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.6s ease;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-
-#proverb-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-        #backButton {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 10px 20px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        #backButton:hover {
-            background-color: #f8f9fa;
-            color: #000000;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'ChineseProverb.css' %}">
 </head>
 <body>
 <div id="proverb-container">
@@ -72,42 +17,6 @@
     <button id="backButton" onclick="goToHomePage()">Back to Home</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            fetchProverb();
-        });
-
-        function fetchProverb() {
-            $.ajax({
-                type: 'GET',
-                url: '/DailyChineseProverb/',
-                headers: {'X-Requested-With': 'XMLHttpRequest'},
-                success: function (data) {
-                    var proverbText = data.random_proverb;
-                    displayProverb(proverbText);
-                },
-                error: function () {
-                    console.error('Failed to fetch Chinese proverb.');
-                }
-            });
-        }
-function displayProverb(proverbText) {
-    var proverbContainer = $('#proverb-container');
-    var proverbTextElement = $('#proverb-text');
-
-    // Ukrywamy kontener z przysłowiem
-    proverbContainer.hide();
-
-    // Ustawiamy tekst przysłowia
-    proverbTextElement.text(proverbText);
-
-    // Animacja pojawiania się tekstu
-    proverbContainer.fadeIn(550); // 1000ms = 1 sekunda
-}
-
-        function goToHomePage() {
-            window.location.href = '/';
-        }
-    </script>
+    <script src="{% static 'ChineseProverb.js' %}"></script>
 </body>
 </html>

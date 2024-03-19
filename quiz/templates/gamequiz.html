@@ -1,62 +1,12 @@
 <!-- gamequiz.html -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Quiz</title>
-        <style>
-        body {
-            background-color: #6f42c1; /* Fioletowe tło */
-            color: black; /* Biały kolor tekstu */
-            font-family: Arial, sans-serif; /* Wybrana czcionka */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px; /* Wewnętrzny odstęp dla całej strony */
-        }
-
-        div {
-            background-color: #ffffff; /* Tło pola z pytaniami i odpowiedziami */
-            border-radius: 8px; /* Zakrąglenie rogów pola */
-            padding: 20px; /* Wewnętrzny odstęp pola */
-            margin: 10px 0; /* Zewnętrzny odstęp pola */
-            width: 100%; /* Szerokość pola */
-        }
-
-        label {
-            display: block; /* Każda odpowiedź w nowej linii */
-            margin-bottom: 10px; /* Odstęp między odpowiedziami */
-        }
-
-        input[type="radio"] {
-            margin-right: 5px; /* Odstęp między radio buttonem a tekstem odpowiedzi */
-        }
-
-        button {
-            background-color: #6f42c1; /* Fioletowy kolor przycisku */
-            color: #ffffff; /* Biały kolor tekstu przycisku */
-            padding: 10px 15px;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-            margin-top: 10px; /* Odstęp od ostatniego pola */
-        }
-
-        button:hover {
-            background-color: #593499; /* Kolor przycisku po najechaniu myszką */
-        }
-
-        h1 {
-            color: white; /* Biały kolor tekstu dla nagłówków i paragrafów */
-        }
-        .QuestionContainer p {
-            color: black;
-            text-align: center;
-            font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'gamequiz.css' %}">
 </head>
 <body>
 <!-- W pliku gamequiz.html -->

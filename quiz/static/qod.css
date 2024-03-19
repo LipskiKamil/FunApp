@@ -1,0 +1,99 @@
+        body {
+            background-color: #6f42c1;
+            color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+           display: flex;
+           align-items: center;
+           flex-direction: column;
+        }
+
+        #questionCard {
+            background-color: #ffffff;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #questionCard .fa-angry {
+            font-size: 24px;
+            position: absolute;
+        }
+
+        #questionCard .fa-angry.top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        #questionCard .fa-angry.bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .questionButtons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+
+        #changeColorButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #changeColorButton:hover {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+        #timer {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+        .AnswerButton {
+            width: 90%;
+        }

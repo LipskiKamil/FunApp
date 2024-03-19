@@ -1,62 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'mainpage.js' %}"></script>
 </head>
-<style>
-    /* static/styles.css */
-
-body {
-    background-color: #6f42c1;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"], button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #ffff;
-    color: black;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.5s ease;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-}
-
-h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-</style>
 
 <body>
     <h1 id="animatedText">Witaj na stronie głównej!</h1>
@@ -66,23 +17,5 @@ h2 {
         <a href="/DailyChineseProverb"><button>Chińskie przysłowie</button></a>
     </div>
 </body>
-<script>
-            document.addEventListener("DOMContentLoaded", function () {
-            var textElement = document.querySelector("#animatedText");
-            var text = textElement.innerText;
-            textElement.innerText = "";
 
-            function animateText(index) {
-                if (index < text.length) {
-                    textElement.innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(function () {
-                        animateText(index);
-                    }, 30); // Ustaw dowolne opóźnienie między literami (w milisekundach)
-                }
-            }
-
-            animateText(0);
-        });
-</script>
 </html>
